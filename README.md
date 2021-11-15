@@ -19,4 +19,7 @@ In Macroeconomics, there's a real need for this type of quantification, ever sin
 We'll try to quantify that model discrepancy using a Gaussian Process, in a Bayesian perspective.
 
 
-For more information, check out the pdf in the repository. 
+For more information, check out the pdfs in the repository. 
+
+
+FullGP.nb - In this Mathematica Notebook, I use the full Gaussian Process(GP). I say full, because in this notebook, because in another one I use an approximation to the GP. In the simulations, certain mathematical operations required the matrices to be positive-definite. However, due to machine precision, certain matrices were not. Hence, I had to build from scratch an algorithm that made sure we could find new approximate matrices, which were PD and maintained that property whenever needed. This created two computational bottlenecks, at the learning and filtering phase.
