@@ -23,3 +23,5 @@ For more information, check out the pdfs in the repository.
 
 
 FullGP.nb - In this Mathematica Notebook, I use the full Gaussian Process(GP). I say full because in another one I use an approximation to the GP. In the simulations, certain mathematical operations required the matrices to be positive-definite. However, due to machine precision, certain matrices were not. Hence, I had to build from scratch an algorithm that made sure we could find new approximate matrices, which were PD and maintained that property whenever needed. This created two computational bottlenecks, at the learning and filtering phase.
+
+ApproxGP.nb - In this notebook, I use a functional approximation to the GP, which makes the filtering of the main algorith run much faster. However, there's a trade-off. We lose some accuracy in our predictions, when comparing with the full GP.
